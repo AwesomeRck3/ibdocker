@@ -21,7 +21,7 @@ RUN chmod a+x ibgateway-latest-standalone-linux-x64.sh
 RUN mkdir -p /opt/IBController/
 WORKDIR /opt/IBController/
 RUN wget -q https://github.com/ib-controller/ib-controller/releases/download/3.4.0/IBController-3.4.0.zip
-RUN unzip ./IBController-QuantConnect-3.4.0.zip
+RUN unzip ./IBController-3.4.0.zip
 RUN chmod -R u+x *.sh && chmod -R u+x Scripts/*.sh
 
 # Install Java 8
