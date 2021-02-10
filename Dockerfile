@@ -38,20 +38,6 @@ WORKDIR /
 # Install TWS
 RUN yes n | /opt/TWS/ibgateway-latest-standalone-linux-x64.sh
 
-# INSTALL MINICONDA
-# downloads Miniconda
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O Miniconda.sh
-bash Miniconda.sh -b  # installs it
-rm -rf Miniconda.sh  # removes the installer
-export PATH="/root/miniconda3/bin:$PATH"  # prepends the new path
-
-# INSTALL PYTHON LIBRARIES
-conda install -y pandas  # installs pandas
-conda install -y ipython  # installs IPython shell
-
-# CUSTOMIZATION
-cd /root/
-wget http://hilpisch.com/.vimrc  # Vim configuration
 
 #CMD yes
 
